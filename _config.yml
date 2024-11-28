@@ -22,8 +22,8 @@ title: CatioCrypto
 email: criptolatinos@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Criptolatinos school of cryptography.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/catiocrypto"
+url: "https://www.octavio.pk"
 twitter_username: ""
 github_username: ""
 
