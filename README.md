@@ -1,3 +1,3 @@
-# inca-crypto
+# catio-crypto
 
 Criptolatinos cryptography school

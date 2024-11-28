@@ -22,8 +22,8 @@ $header-text-color: #111;
 $background-color: #ffffff;
 
 $white-color:      #fafafa;
-$strong-orange-color:  #FAEE52;
-$orange-hover-color:  #FAEE52;
+$strong-orange-color:  #EA817D;
+$orange-hover-color:  #EA817D;
 $red-hover-color:  #fafafa;
 $black-color:       black;
 
@@ -44,6 +44,28 @@ $full-width:       100%;
   @media screen and (max-width: $device) {
     @content;
   }
+}
+
+.site-footer .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust spacing between rows if needed */
+}
+
+.contact h2, .license p {
+  margin: 0;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.9em; /* Adjust font size if needed */
+  margin-top: 10px;
 }
 
 
