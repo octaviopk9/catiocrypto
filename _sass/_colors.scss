@@ -1,0 +1,184 @@
+// Color Palette for LatinCrypt 2025
+$color-text-green-2025: #003C35; // "LATINCRYPT" text
+$color-accent-pink: #F57F7A; // Flower + asterisk
+$color-binary-green: #0B332C; // Binary 0s
+$color-binary-red: #D44D49; // Binary 1s
+$color-map-fill: #FDFBF2; // Background fill
+$color-accent-coral: #F47B78; // "2025" text
+$color-shadow-dark: #002F2B; // Shadow
+
+// Utility variables
+$color-background: $color-map-fill;
+$color-primary-text: $color-text-green-2025;
+$color-highlight: $color-text-green-2025;
+
+// Speakers section styles
+.speakers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.speaker-card {
+  background: white;
+  border: 3px solid $color-primary-text;
+  border-radius: 15px;
+  padding: 25px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.speaker-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 40%;
+  margin: 0 auto 15px;
+  border: 4px solid $color-accent-pink;
+  object-fit: cover;
+  background-color: #f0f0f0;
+  display: block;
+  max-width: none !important;
+}
+
+.speaker-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: $color-primary-text;
+  margin-bottom: 8px;
+
+  a {
+    color: $color-primary-text;
+    text-decoration: none;
+    background: none;
+    padding: 0;
+
+    &:hover {
+      color: $color-accent-pink;
+      background: none;
+    }
+  }
+}
+
+.speaker-affiliation {
+  font-size: 16px;
+  color: $color-binary-green;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.speaker-bio {
+  font-size: 14px;
+  line-height: 1.5;
+  color: $black-color;
+  text-align: left;
+}
+
+// Responsive design for speakers
+@include media-query($on-palm) {
+  .speakers-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .speaker-card {
+    width: 90%;
+    max-width: 360px;
+  }
+
+  .speaker-image {
+    width: 140px;
+    height: 140px;
+    font-size: 36px;
+  }
+}
+
+.page-2025 {
+  background-color: $color-background;
+  color: $color-primary-text;
+  background-image: none;
+  /* 💥 removes dots or any image */
+
+  h1,
+  h2,
+  h3 {
+    color: $color-primary-text;
+  }
+
+  p,
+  li,
+  span,
+  div {
+    color: $black-color;
+  }
+
+  thead {
+    color: $black-color;
+    background-color: $color-primary-text; // or another suitable background
+  }
+
+  th {
+    color: $black-color;
+    background-color: $color-primary-text; // or another suitable background
+  }
+
+  a {
+    color: $black-color;
+    text-decoration: none;
+    background-color: $color-accent-pink;
+    padding: 5px;
+
+    &:hover {
+      color: $white-color;
+    }
+
+  }
+
+  .menu {
+    clear: both;
+    float: right;
+    margin-top: -50px;
+    font-size: 20px;
+    border-bottom: solid 5px $color-background;
+
+    @include media-query($on-palm) {
+      margin-left: 90px;
+    }
+  }
+
+  .menu-link {
+    background-color: $color-accent-coral;
+    border-top: 55px solid $color-background;
+
+    &,
+    &:hover {
+      color: $black-color;
+    }
+
+    @include media-query($on-palm) {
+      border-top: 0px;
+      border-right: 5px solid;
+      font-size: 16px;
+      text-align: right;
+      padding: 3px;
+    }
+  }
+
+  .highlight {
+    background-color: $color-highlight;
+    color: white;
+  }
+
+  .shadow-box {
+    box-shadow: 2px 2px 5px $color-shadow-dark;
+  }
+}

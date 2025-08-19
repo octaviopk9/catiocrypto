@@ -1,11 +1,24 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -13,13 +26,13 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: $full-width;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: 300;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-text-size-adjust: $full-width;
 }
 
 
@@ -27,8 +40,8 @@ body {
  * Images
  */
 img {
-    max-width: $small-width;
-    vertical-align: middle;
+  max-width: $small-width;
+  vertical-align: middle;
 }
 
 
@@ -36,27 +49,34 @@ img {
 /**
  * Lists
  */
-ul, ol {
-    margin-left: $spacing-unit;
+ul,
+ol {
+  margin-left: $spacing-unit;
 }
 
 li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
+
+  >ul,
+  >ol {
+    margin-bottom: 0;
+  }
 }
 
 .download {
-    margin-right: $spacing-unit;
-    font-size: 0.8em;
+  margin-right: $spacing-unit;
+  font-size: 0.8em;
 }
 
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
 }
 
 
@@ -65,14 +85,14 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $black-color;
-    text-decoration: none;
-    background-color: $orange-hover-color;
-    padding: 5px;
+  color: $black-color;
+  text-decoration: none;
+  background-color: $orange-hover-color;
+  padding: 5px;
 
-    &:hover {
-      color: $white-color;
-    }
+  &:hover {
+    color: $white-color;
+  }
 }
 
 
@@ -81,31 +101,31 @@ a {
  * Wrapper
  */
 .wrapper {
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    border: solid;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  border: solid;
 
-    @extend %clearfix;
+  @extend %clearfix;
 
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+  }
 
-    > a {
-        background-color: white;
-    }
+  >a {
+    background-color: white;
+  }
 }
 
 .division {
 
-    @include media-query($on-palm) {
+  @include media-query($on-palm) {
     transform: skewY(-15deg);
-    }
+  }
 }
 
 
@@ -114,11 +134,11 @@ a {
  */
 %clearfix {
 
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 
@@ -128,25 +148,26 @@ a {
  */
 
 .home-logo {
-    margin-top: 5px;
-    width: 80%;
-    height: auto;
+  margin-top: 5px;
+  width: 80%;
+  height: auto;
 
-    @include media-query($on-palm) {
-        width: 40%;
-    }
+  @include media-query($on-palm) {
+    width: 40%;
+  }
 }
 
 .icon-footer {
-    margin-top: 0px;
-  > svg {
+  margin-top: 0px;
+
+  >svg {
     width: 38px;
     height: 38px;
   }
 }
 
 .icon-footer-pixel {
-  > svg {
+  >svg {
     width: 38px;
     height: 38px;
   }
@@ -155,16 +176,20 @@ a {
 .icon-footer,
 .icon-footer-pixel,
 .icon-inside-big {
-  > svg {
-    path, rect {
+  >svg {
+
+    path,
+    rect {
       fill: $black-color;
-      webkit-transition: fill 1s ease-out; /* For Safari 3.1 to 6.0 */
+      webkit-transition: fill 1s ease-out;
+      /* For Safari 3.1 to 6.0 */
       transition: fill 1s ease-out;
     }
 
     .st0 {
       fill: $black-color;
-      webkit-transition: fill 1s ease-out; /* For Safari 3.1 to 6.0 */
+      webkit-transition: fill 1s ease-out;
+      /* For Safari 3.1 to 6.0 */
       transition: fill 1s ease-out;
     }
 
@@ -185,82 +210,96 @@ a {
 @mixin pixelize($size, $matrix, $colors, $default-color: null) {
   $ret: "";
   $moz: "";
-  @if ($default-color == null) {
+
+  @if ($default-color ==null) {
     // count number of each color in matrix and decide main color by highest count
-    $matrix-colors: ();
-    $counts: ();
-    @each $row in $matrix {
-      @each $item in $row {
-        @if $item != 0 {
-          $index: index($matrix-colors, $item);
-          @if not $index {
-            $matrix-colors: append($matrix-colors, $item);
-            $counts: append($counts, 1);
-          } @else {
-            $count: nth($counts, $index) + 1;
-            $counts: set-nth($counts, $index, $count);
-          }
-        }
+    $matrix-colors: (
+    );
+  $counts: (
+  );
+
+@each $row in $matrix {
+  @each $item in $row {
+    @if $item !=0 {
+      $index: index($matrix-colors, $item);
+
+      @if not $index {
+        $matrix-colors: append($matrix-colors, $item);
+        $counts: append($counts, 1);
+      }
+
+      @else {
+        $count: nth($counts, $index) + 1;
+        $counts: set-nth($counts, $index, $count);
       }
     }
-    // use index of the highest count to get the corresponding matrix color
-    $default-color: nth($colors, nth($matrix-colors, index($counts, max($counts...))));
-  }
-
-  @for $i from 1 through length($matrix) {
-    $row: nth($matrix, $i);
-
-    @for $j from 1 through length($row) {
-      $dot: nth($row, $j);
-
-      @if $dot != 0 {
-        @if $ret != "" {
-          $ret: $ret + ",";
-          $moz: $moz + ",";
-        }
-
-        $color: nth($colors, $dot);
-        @if $color == $default-color {
-          $ret: $ret + ($j * $size) + " " + ($i * $size);
-          $moz: $moz + ($j * $size) + " " + ($i * $size) + " 0 0.020em";
-        } @else {
-          $ret: $ret + ($j * $size) + " " + ($i * $size) + " " + $color;
-          $moz: $moz + ($j * $size) + " " + ($i * $size) + " 0 0.020em " + $color;
-        }
-      }
-    }
-  }
-
-  width: $size;
-  height: $size;
-  color: $default-color;
-  box-shadow: unquote($ret);
-
-  // firefox only style
-  @supports (-moz-appearance: meterbar) {
-    box-shadow: unquote($moz);
   }
 }
 
-$icon-github-colors: (#F97625, #000);
+// use index of the highest count to get the corresponding matrix color
+$default-color: nth($colors, nth($matrix-colors, index($counts, max($counts...))));
+}
+
+@for $i from 1 through length($matrix) {
+  $row: nth($matrix, $i);
+
+  @for $j from 1 through length($row) {
+    $dot: nth($row, $j);
+
+    @if $dot !=0 {
+      @if $ret !="" {
+        $ret: $ret + ",";
+        $moz: $moz + ",";
+      }
+
+      $color: nth($colors, $dot);
+
+      @if $color ==$default-color {
+        $ret: $ret + ($j * $size) + " " + ($i * $size);
+        $moz: $moz + ($j * $size) + " " + ($i * $size) + " 0 0.020em";
+      }
+
+      @else {
+        $ret: $ret + ($j * $size) + " " + ($i * $size) + " " + $color;
+        $moz: $moz + ($j * $size) + " " + ($i * $size) + " 0 0.020em " + $color;
+      }
+    }
+  }
+}
+
+width: $size;
+height: $size;
+color: $default-color;
+box-shadow: unquote($ret);
+
+// firefox only style
+@supports (-moz-appearance: meterbar) {
+  box-shadow: unquote($moz);
+}
+}
+
+$icon-github-colors: (
+  #F97625,
+  #000
+);
 // prettier-ignore
 $icon-github: (
-  ( 0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0 ),
-  ( 2,2,2,2,1,2,2,2,2,2,2,2,2,1,2,2 ),
-  ( 2,2,2,2,1,1,2,2,2,2,2,2,1,1,2,2 ),
-  ( 2,2,2,2,1,1,1,1,1,1,1,1,1,1,2,2 ),
-  ( 2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,2 ),
-  ( 2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,2 ),
-  ( 2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,2 ),
-  ( 2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,2 ),
-  ( 2,2,2,2,1,1,1,1,1,1,1,1,1,1,2,2 ),
-  ( 2,2,2,2,2,1,1,1,1,1,1,1,1,2,2,2 ),
-  ( 2,1,1,2,2,2,2,1,1,1,1,2,2,2,2,2 ),
-  ( 2,2,2,1,2,2,1,1,1,1,1,1,2,2,2,2 ),
-  ( 2,2,2,2,1,1,1,1,1,1,1,1,2,2,2,2 ),
-  ( 2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2 ),
-  ( 2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2 ),
-  ( 0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,0 )
+  (0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0),
+  (2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2),
+  (2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2),
+  (2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2),
+  (2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2),
+  (2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2),
+  (2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2),
+  (2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2),
+  (2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2),
+  (2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2),
+  (2, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 2, 2),
+  (2, 2, 2, 1, 2, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2),
+  (2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2),
+  (2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2),
+  (2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2),
+  (0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0)
 );
 
 .nes-icon {
@@ -295,20 +334,21 @@ $icon-github: (
 }
 
 .copyright {
-   font-size: 11px;
-   text-align: left;
-   margin-left: 10px;
+  font-size: 11px;
+  text-align: left;
+  margin-left: 10px;
 
-   > .top-copyright {
-       padding-top: 80px;
-   }
+  >.top-copyright {
+    padding-top: 80px;
+  }
 
-   @include media-query($on-palm) {
-     font-size: 8px;
-     > .top-copyright {
-       padding-top: 10px;
-     }
-   }
+  @include media-query($on-palm) {
+    font-size: 8px;
+
+    >.top-copyright {
+      padding-top: 10px;
+    }
+  }
 }
 
 .none {
@@ -319,7 +359,9 @@ $icon-github: (
   }
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 5px solid black;
   border-collapse: collapse;
   padding: 1rem;
@@ -329,4 +371,96 @@ table, th, td {
 th {
   font-weight: 900;
   background-color: $strong-orange-color;
+}
+
+// Color Palette for LatinCrypt 2025
+$color-text-green-2025: #003C35; // "LATINCRYPT" text
+$color-accent-pink: #F57F7A; // Flower + asterisk
+$color-binary-green: #0B332C; // Binary 0s
+$color-binary-red: #D44D49; // Binary 1s
+$color-map-fill: #FDFBF2; // Background fill
+$color-accent-coral: #F47B78; // "2025" text
+$color-shadow-dark: #002F2B; // Shadow
+
+// Utility variables
+$color-background: $color-map-fill;
+$color-primary-text: $color-text-green-2025;
+$color-highlight: $color-text-green-2025;
+
+// Speakers section styles
+.speakers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.speaker-card {
+  background: white;
+  border: 3px solid $color-primary-text;
+  border-radius: 15px;
+  padding: 25px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.speaker-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 40%;
+  margin: 0 auto 15px;
+  border: 4px solid $color-accent-pink;
+  object-fit: cover;
+  background-color: #f0f0f0;
+  display: block;
+  max-width: none !important;
+}
+
+.speaker-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: $color-primary-text;
+  margin-bottom: 8px;
+
+  a {
+    color: $color-primary-text;
+    text-decoration: none;
+    background: none;
+    padding: 0;
+
+    &:hover {
+      color: $color-accent-pink;
+      background: none;
+    }
+  }
+}
+
+.speaker-affiliation {
+  font-size: 16px;
+  color: $color-binary-green;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.speaker-bio {
+  font-size: 14px;
+  line-height: 1.5;
+  color: $black-color;
+  text-align: left;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: center;
+  /* Centers the tables horizontally */
+  gap: 20px;
+  /* Adds space between the tables */
 }
