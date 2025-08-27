@@ -5,28 +5,111 @@ tags: menu
 title: Información
 ---
 
+<meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+<style>
+    .container-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #f5f5f5;
+    }
+
+    /* Mobile-friendly tables */
+    @media (max-width: 600px) {
+
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+
+        thead {
+            display: none;
+        }
+
+        tr {
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        td {
+            text-align: left;
+            padding-left: 40%;
+            position: relative;
+        }
+
+        td::before {
+            position: absolute;
+            left: 10px;
+            width: 35%;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        td:nth-of-type(1)::before {
+            content: "Horario";
+        }
+
+        td:nth-of-type(2)::before {
+            content: "Agenda";
+        }
+
+        td:nth-of-type(3)::before {
+            content: "Instructor";
+        }
+    }
+</style>
+
 <div>
     <br>
-    <p style="text-align: center">CatíoCrypto será parte de <a
-            href="https://ciencias.medellin.unal.edu.co/eventos/latincrypt/"
-            target="_blank">LatinCrypt 2025</a>, teniendo lugar los días 26 y 27
-        de Setiembre de 2025.</p>
+    <p style="text-align: center">
+        CatíoCrypto será parte de
+        <a href="https://ciencias.medellin.unal.edu.co/eventos/latincrypt/"
+            target="_blank">LatinCrypt 2025</a>,
+        teniendo lugar los días 26 y 27 de Setiembre de 2025.
+    </p>
     <br>
+
     <p><b>Organización: <a href="https://criptolatino.org/"
                 class="highlighted-link">Criptolatino</a></b></p>
     <p>Chairs: Octavio Perez-Kempner y Hernán Venegas</p>
     <p><b>Locación:</b> <strong>Universidad EAFIT</strong>. Dirección: Carrera
-        49 #7 Sur 50, El Poblado, Medellín, Antioquia, Colombia. <a
-            href="https://www.google.com/maps/place/Universidad+EAFIT/@6.1996012,-75.5817888,17z"
-            target="_blank">Ver en Google Maps</a></p>
+        49 #7 Sur 50, El Poblado, Medellín, Antioquia, Colombia.
+        <a href="https://www.google.com/maps/place/Universidad+EAFIT/@6.1996012,-75.5817888,17z"
+            target="_blank">Ver en Google Maps</a>
     </p>
-    <p><b>Registro:</b> La escuela tiene un costo de 22 USD antes del 1/09 y
-        de 26 USD luego del 1/09. <a
-            href="https://ticketexpress.com.co/event/latin-crypt-2025/"
-            target="_blank">Registrarse aquí</a></p>
+    <p><b>Registro:</b> La escuela tiene un costo de 22 USD antes del 1/09 y de
+        26 USD luego del 1/09.
+        <a href="https://ticketexpress.com.co/event/latin-crypt-2025/"
+            target="_blank">Registrarse aquí</a>
+    </p>
 
-    <br>
-    <br>
+    <br><br>
+
+    <!-- SPEAKERS -->
     <section id="speakers"
         style="margin-bottom: 60px;">
         <h2 style="text-align: center;">Instructores</h2>
@@ -41,22 +124,21 @@ title: Información
                         target="_blank">Valerie Gilchrist</a>
                 </div>
                 <div class="speaker-affiliation">Université Libre de Bruxelles
-                    (ULB)
-                </div>
+                    (ULB)</div>
                 <div class="speaker-bio">
                     Valerie Gilchrist se formó en Canadá, obteniendo una
                     Maestría en Matemáticas y un Bachelor en las universidades
                     de Waterloo y Toronto, respectivamente. Actualmente es
-                    doctoranda en la Université
-                    Libre de Bruxelles bajo la dirección de Christophe Petit. Su
-                    investigación se centra en la criptografía post-cuántica
-                    basada en isogenias, con aportes tanto en el diseño como en
-                    el análisis de seguridad de algoritmos. Ha publicado en
-                    conferencias como CRYPTO y LatinCrypt, abordando desde
-                    problemas de isomorfismo tensorial hasta técnicas eficientes
-                    de evaluación de isogenias.</div>
+                    doctoranda en la Université Libre de Bruxelles bajo la
+                    dirección de Christophe Petit. Su investigación se centra en
+                    la criptografía post-cuántica basada en isogenias, con
+                    aportes tanto en el diseño como en el análisis de seguridad
+                    de algoritmos. Ha publicado en conferencias como CRYPTO y
+                    LatinCrypt, abordando desde problemas de isomorfismo
+                    tensorial hasta técnicas eficientes de evaluación de
+                    isogenias.
+                </div>
             </div>
-
 
             <div class="speaker-card">
                 <img src="{{ '/assets/eduardo_photo.jpg' | relative_url }}"
@@ -70,20 +152,17 @@ title: Información
                     (TII)</div>
                 <div class="speaker-bio">
                     Eduardo Soria-Vázquez es doctor por la universidad de
-                    Bristol, Reino Unido y
-                    ex investigador posdoctoral en la universidad de Aarhus,
-                    Dinamarca.
-                    Actualmente se desempeña como Lead Cryptographer en el
-                    Technology
-                    Innovation Institute. Cuenta con más de 15 publicaciones en
-                    las conferencias insignia de
-                    la IACR, incluyendo CRYPTO, EUROCRYPT y ASIACRYPT, con
-                    contribuciones que van desde desarrollos teóricos en
-                    protocolos de computación multipartita hasta aplicaciones
-                    prácticas en criptografía eficiente.
+                    Bristol, Reino Unido y ex investigador posdoctoral en la
+                    universidad de Aarhus, Dinamarca. Actualmente se desempeña
+                    como Lead Cryptographer en el Technology Innovation
+                    Institute. Cuenta con más de 15 publicaciones en las
+                    conferencias insignia de la IACR, incluyendo CRYPTO,
+                    EUROCRYPT y ASIACRYPT, con contribuciones que van desde
+                    desarrollos teóricos en protocolos de computación
+                    multipartita hasta aplicaciones prácticas en criptografía
+                    eficiente.
                 </div>
             </div>
-
 
             <div class="speaker-card">
                 <img src="{{ '/assets/armando_photo.jpg' | relative_url }}"
@@ -108,22 +187,26 @@ title: Información
                     conferencias y foros de referencia como USENIX.
                 </div>
             </div>
+
         </div>
     </section>
-    <br>
+
+    <!-- AGENDA -->
     <h2 style="text-align: center;">Agenda (tentativa)</h2>
     <div class="container-flex">
-        <div>
-            <p><b>
-                    <h3 style="text-align: center;">Día 1: 26/09</h3>
-                </b></p>
-            <div style="overflow-x:auto;">
-                <table>
+
+        <!-- Día 1 -->
+        <h3 style="text-align: center;">Día 1: 26/09</h3>
+        <div style="overflow-x:auto;">
+            <table>
+                <thead>
                     <tr>
                         <th>Horario</th>
                         <th>Agenda</th>
                         <th>Instructor</th>
                     </tr>
+                </thead>
+                <tbody>
                     <tr>
                         <td>9.00 - 9.30</td>
                         <td>Bienvenida</td>
@@ -132,21 +215,17 @@ title: Información
                     <tr>
                         <td>9.30 -10.20</td>
                         <td>Curvas elípticas</td>
-                        <td>Armando Faz-Hernandez<br>
-                            <i id="small">Cloudflare</i>
-                        </td>
+                        <td>Armando Faz-Hernandez<br><i>Cloudflare</i></td>
                     </tr>
                     <tr>
                         <td>10:20 -10:40</td>
                         <td>Pausa</td>
                         <td></td>
                     </tr>
-                    <td>10:40 - 11:30</td>
-                    <td>Curvas elípticas</td>
-                    <td>Armando Faz-Hernandez<br>
-                        <i id="small">Cloudflare</i>
-                    </td>
                     <tr>
+                        <td>10:40 - 11:30</td>
+                        <td>Curvas elípticas</td>
+                        <td>Armando Faz-Hernandez<br><i>Cloudflare</i></td>
                     </tr>
                     <tr>
                         <td>11:30 - 11:40</td>
@@ -156,9 +235,7 @@ title: Información
                     <tr>
                         <td>11:40 - 12:30</td>
                         <td>Isogenias</td>
-                        <td>Valerie Gilchrist<br>
-                            <i id="small">ULB</i>
-                        </td>
+                        <td>Valerie Gilchrist<br><i>ULB</i></td>
                     </tr>
                     <tr>
                         <td>12:30 - 14:30</td>
@@ -168,48 +245,44 @@ title: Información
                     <tr>
                         <td>14:30 - 15:20</td>
                         <td>Isogenias</td>
-                        <td>Valerie Gilchrist<br>
-                            <i id="small">ULB</i>
-                        </td>
+                        <td>Valerie Gilchrist<br><i>ULB</i></td>
                     </tr>
                     <tr>
                         <td>15:20 - 15:30</td>
                         <td>Pausa</td>
-                        <td>
-                        </td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>15:30 - 16:20</td>
                         <td>Isogenias</td>
-                        <td>Valerie Gilchrist<br>
-                            <i id="small">ULB</i>
-                        </td>
+                        <td>Valerie Gilchrist<br><i>ULB</i></td>
                     </tr>
                     <tr>
                         <td>16:20 - 16:40</td>
                         <td>Pausa</td>
-                        <td>
-                        </td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>16:40 - 17:30</td>
                         <td>MPC</td>
-                        <td>Eduardo Soria-Vázquez<br>
-                            <i id="small">TII</i>
-                        </td>
+                        <td>Eduardo Soria-Vázquez<br><i>TII</i></td>
                     </tr>
-                </table>
-            </div>
-            <p><b>
-                    <h3 style="text-align: center;">Día 2: 27/09</h3>
-                </b></p>
-            <div style="overflow-x:auto;">
-                <table>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Día 2 -->
+        <h3 style="text-align: center;">Día 2: 27/09</h3>
+        <div style="overflow-x:auto;">
+            <table>
+                <thead>
                     <tr>
                         <th>Horario</th>
                         <th>Agenda</th>
                         <th>Instructor</th>
                     </tr>
+                </thead>
+                <tbody>
                     <tr>
                         <td>9.00 - 9.30</td>
                         <td></td>
@@ -218,21 +291,17 @@ title: Información
                     <tr>
                         <td>9.30 - 10.20</td>
                         <td>Zero-Knowledge</td>
-                        <td>Armando Faz-Hernandez<br>
-                            <i id="small">Cloudflare</i>
-                        </td>
+                        <td>Armando Faz-Hernandez<br><i>Cloudflare</i></td>
                     </tr>
                     <tr>
                         <td>10:20 -10:40</td>
                         <td>Pausa</td>
                         <td></td>
                     </tr>
-                    <td>10:40 - 11:30</td>
-                    <td>Implementación</td>
-                    <td>Armando Faz-Hernandez<br>
-                        <i id="small">Cloudflare</i>
-                    </td>
                     <tr>
+                        <td>10:40 - 11:30</td>
+                        <td>Implementación</td>
+                        <td>Armando Faz-Hernandez<br><i>Cloudflare</i></td>
                     </tr>
                     <tr>
                         <td>11:30 - 11:40</td>
@@ -242,9 +311,7 @@ title: Información
                     <tr>
                         <td>11:40 - 12:30</td>
                         <td>MPC</td>
-                        <td>Eduardo Soria-Vázquez<br>
-                            <i id="small">TII</i>
-                        </td>
+                        <td>Eduardo Soria-Vázquez<br><i>TII</i></td>
                     </tr>
                     <tr>
                         <td>12:30 - 14:30</td>
@@ -254,40 +321,32 @@ title: Información
                     <tr>
                         <td>14:30 - 15:20</td>
                         <td>MPC</td>
-                        <td>Eduardo Soria-Vázquez<br>
-                            <i id="small">TII</i>
-                        </td>
+                        <td>Eduardo Soria-Vázquez<br><i>TII</i></td>
                     </tr>
                     <tr>
                         <td>15:20 - 15:30</td>
                         <td>Pausa</td>
-                        <td>
-                        </td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>15:30 - 16:20</td>
                         <td>Implementación</td>
-                        <td>Eduardo Soria-Vázquez<br>
-                            <i id="small">TII</i>
-                        </td>
+                        <td>Eduardo Soria-Vázquez<br><i>TII</i></td>
                     </tr>
                     <tr>
                         <td>16:20 - 16:40</td>
                         <td>Pausa</td>
-                        <td>
-                        </td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>16:40 - 17:30</td>
                         <td>Implementación</td>
-                        <td>Valerie Gilchrist<br>
-                            <i id="small">ULB</i>
-                        </td>
+                        <td>Valerie Gilchrist<br><i>ULB</i></td>
                     </tr>
-                </table>
-            </div>
+                </tbody>
+            </table>
         </div>
+
     </div>
-    <br>
-    <br>
+    <br><br>
 </div>
